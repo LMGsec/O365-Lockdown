@@ -1,7 +1,8 @@
 ## Advice from the LMG Security team
     Enable multi-factor authentication! This is the single most effective method of preventing unauthorized access 
     to your companies email system. We did not build this into the script because it will require some planning 
-    before deployment, but it should be done as soon as possible. Here is a nice writeup on how to enable this feature -               https://blogs.technet.microsoft.com/office365/2015/08/25/powershell-enableenforce-multifactor-authentication-for-all-bulk-users-in-office-365/
+    before deployment, but it should be done as soon as possible. Here is a nice writeup on how to enable this feature - 
+    https://blogs.technet.microsoft.com/office365/2015/08/25/powershell-enableenforce-multifactor-authentication-for-all-bulk-users-in-office-365/
 
 ## Description
     This is a basic powershell script that can be used to secure an Office 365 environment and enable audit logging. 
