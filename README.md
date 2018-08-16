@@ -11,10 +11,9 @@ This script takes the following actions:
     1.) Enables audit logging for all accounts in your organization
     2.) Enables all owner actions as logged events
     3.) Sets log retention to 365 days
-    4.) Disables POP3 - comment out line 18 if you dont want this
-    5.) Disables IMAP - comment out line 21 if you dont want this
-    6.) Removes external forwarding inbox rules
-    7.) Disables external fowarding at a domain level
+    4.) Allows the user to disable several mailbox access methods
+    5.) Removes external forwarding inbox rules
+    6.) Disables external fowarding at a domain level
 
 ## Why are these things important?
 
@@ -30,20 +29,17 @@ This script takes the following actions:
     Normal retention time is 90 days. This makes it longer. Feel free to set the retention time even longer (or shorter) 
     based on your organization's needs. 
 
-    > 4.) Disables POP3 
-    POP3 is just another way that attackers can potentially access your account. If you don't need it, turn it off. The 
-    script will prompt and ask you if you want to disable POP3 before taking action.
+    > 4.) Disables POP3, IMAP, MAPI, EWS, ActiveSync, and OWA as needed. 
+    Access methods like IMAP and POP3 are just other ways that attackers can potentially access your account. If you 
+    don't need them, turn them off. The script will prompt and ask you if you want to disable each access method before 
+    taking action.
 
-    >5.) Disables IMAP 
-    IMAP is just another way that attackers can potentially access your account. If you don't need it, turn it off. The 
-    script will prompt and ask you if you want to disable IMAP before taking action.
-
-    >6.) Removes external forwarding inbox rules
+    > 5.) Removes external forwarding inbox rules
     External forwarding rules are often installed by attackers seeking to retain copies of user mail. Other times, users 
     themselves set up these rules to easily access work email from home, in violation of policy. The script will prompt and 
     ask you if you want to remove a particular rule before deleting it. 
 
-    > 7.) Disables external fowarding at a domain level
+    > 6.) Disables external fowarding at a domain level
     This makes it so that if you delete a user's forwarding rules, they cannot go back and re-enter the rule. Furthermore, 
     unauthorized users cannot add forwarding rules without first changing this global setting. 
 
