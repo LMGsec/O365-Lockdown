@@ -13,7 +13,7 @@ This script takes the following actions:
     3.) Sets log retention to 365 days
     4.) Allows the user to disable several mailbox access methods
     5.) Removes external forwarding inbox rules
-    6.) Disables external fowarding at a domain level
+    6.) Disables external forwarding at a domain level
 
 ## Why are these things important?
 
