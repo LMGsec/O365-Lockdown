@@ -5,6 +5,7 @@ Import-PSSession $Session
 
 <# Enable logging for all accounts, enable all owner log actions, and retain for 365 days #>
 Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+Set-AdminAuditLogConfig -AdminAuditLogAgeLimit 365.00:00:00
 Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | Set-Mailbox -AuditEnabled $true -AuditLogAgeLimit 365
 Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | Set-Mailbox -AuditOwner Create,HardDelete,MailboxLogin,Move,MoveToDeletedItems,SoftDelete,Update
 Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | Set-Mailbox -AuditDelegate Create,FolderBind,SendAs,SendOnBehalf,SoftDelete,HardDelete,Update,Move,MoveToDeletedItems,UpdateFolderPermissions
@@ -85,7 +86,7 @@ foreach($Forward in $Forwards)
     {
         y {Write-Host "Deleting"; Set-Mailbox -Identity $Forward.Identity -ForwardingSmtpAddress $null -ForwardingAddress $null}
         n {Write-Host "Skipping"}
-        Defuault {Write-Host "Skipping"}
+        Default {Write-Host "Skipping"}
     }
 }
 
