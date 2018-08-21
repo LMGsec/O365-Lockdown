@@ -21,11 +21,11 @@ This script takes the following actions:
     Audit logging is not enabled by default, and it's not retroactive. If you need to investigate suspicious 
     activity, you must have already enabled audit logging to have easy access to log data.
  
-    >2.) Enables all owner actions as logged events
+    > 2.) Enables all owner actions as logged events
     Not all audit logging capabilities are enabled when you enable audit logging (really). It's a pain in the 
     neck, and this fixes it.
 
-    >3.) Sets log retention to 365 days
+    > 3.) Sets log retention to 365 days
     Normal retention time is 90 days. This makes it longer. Feel free to set the retention time even longer (or shorter) 
     based on your organization's needs. 
 
