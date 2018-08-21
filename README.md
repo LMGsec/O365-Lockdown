@@ -44,7 +44,7 @@ This script takes the following actions:
     unauthorized users cannot add forwarding rules without first changing this global setting. 
 
 ## WARNING
-    Carefully review at the script before running it. There are parts of this that you might not want to run on your 
+    Carefully review the script before running it. There are parts of this that you might not want to run on your 
     particular system, or you may want to add additional items if your organization might benefit from them. Pay 
     particular attention to the section that disables access features like POP3. These features can be enabled again 
     on a per user basis if the need is there, but if a large number of users in your organization utilize this protocol
